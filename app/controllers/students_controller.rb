@@ -22,6 +22,7 @@ class StudentsController < ApplicationController
           flash.keep(:notice)
           render js: "window.location.pathname = #{student_path(@student).to_json}"
         }
+        format.html {redirect_to root_path}
       else
         format.js{ render :error }
       end

@@ -9,9 +9,7 @@
       </a>
 
       <a href="<%= student_path(student) %>">
-
-
-        <%= image_tag("students/football.jpg", class: 'img-responsive') %>
+        <%= image_tag student.photo1.url(:medium), class: "img-responsive", width:600 %>
       </a>
     </figure>
     <div class="item-box-desc">

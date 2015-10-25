@@ -7,21 +7,21 @@ class Student < ActiveRecord::Base
                     :styles => {:large => "1200x800", :medium => "600x400", :small => "300x200" },
                     :url  => "/assets/students/:id/:style/:basename.:extension",
                     :path => ":rails_root/public/assets/students/:id/:style/:basename.:extension"
-  validates_attachment_size :photo1, :less_than => 1000.kilobytes
+  validates_attachment_size :photo1, :less_than => 2000.kilobytes
   validates_attachment_content_type :photo1, :content_type => ['image/jpeg', 'image/jpg']
 
   has_attached_file :photo2,
                     :styles => {:large => "1200x800", :medium => "600x400", :small => "300x200" },
                     :url  => "/assets/students/:id/:style/:basename.:extension",
                     :path => ":rails_root/public/assets/students/:id/:style/:basename.:extension"
-  validates_attachment_size :photo2, :less_than => 1000.kilobytes
+  validates_attachment_size :photo2, :less_than => 2000.kilobytes
   validates_attachment_content_type :photo2, :content_type => ['image/jpeg', 'image/jpg']
 
   has_attached_file :photo3,
                     :styles => {:large => "1200x800", :medium => "600x400", :small => "300x200" },
                     :url  => "/assets/students/:id/:style/:basename.:extension",
                     :path => ":rails_root/public/assets/students/:id/:style/:basename.:extension"
-  validates_attachment_size :photo3, :less_than => 1000.kilobytes
+  validates_attachment_size :photo3, :less_than => 2000.kilobytes
   validates_attachment_content_type :photo3, :content_type => ['image/jpeg', 'image/jpg']
 
 
