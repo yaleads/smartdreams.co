@@ -2,7 +2,7 @@ class StudentsController < ApplicationController
   before_action :set_student, only: [:show]
 
   def index
-    @students = Student.all
+    @students = Student.order(:sort)
   end
 
   def show

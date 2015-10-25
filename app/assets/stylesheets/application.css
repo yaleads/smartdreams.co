@@ -57,3 +57,12 @@ textarea {
 .item-box-desc {
     min-height: 130px !important;
 }
+
+.btn-training-request {
+    color: #ffffff !important;
+    background: #3481b4 !important;
+}
+
+.item-box-desc{
+    background: #EFEFEF !important;
+}
