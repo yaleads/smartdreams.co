@@ -84,6 +84,4 @@ Rails.application.configure do
   config.assets.precompile =  ['*.js', '*.css', '*.css.erb']
 
   config.action_mailer.delivery_method = :sendmail
-
-  Paperclip.options[:command_path] = "/usr/local/bin/"
 end

@@ -29,6 +29,7 @@ class Student < ActiveRecord::Base
   validates :university, :presence => true
   validates :description, :presence => true
   validates :photo1, :presence => true
+  validates :goal, :presence => true
 
   validates :name, length: {maximum: 50}
   validates :university, length: {maximum: 200}
