@@ -1,0 +1,29 @@
+<li class="isotope-item col-sm-6 col-md-4 col-lg-4">
+  <div class="item-box">
+    <figure>
+      <a class="item-hover" href="<%= student_path(student) %>">
+        <span class="overlay color2"></span>
+        <span class="inner">
+          <%= student.description %>
+        </span>
+      </a>
+
+      <a href="<%= student_path(student) %>">
+
+
+        <%= image_tag("students/football.jpg", class: 'img-responsive') %>
+      </a>
+    </figure>
+    <div class="item-box-desc">
+      <h4>
+        <%= student.name%>
+
+      </h4>
+      <small class="styleColor"><%= student.university %></small>
+
+      <small class="styleColor">
+        Collected: $1230 of $12500
+      </small>
+    </div>
+  </div>
+</li>

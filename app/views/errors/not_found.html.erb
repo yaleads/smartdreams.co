@@ -1,0 +1,36 @@
+<section class="container">
+
+  <div class="row">
+
+    <div class="col-md-9">
+      <br>
+      <h2>
+        <strong>Упс</strong>, похоже такой страницы нет!
+        <span class="subtitle">Нам очень жаль, но такой страницы не существует. Воспользуйтесь меню, чтобы выбрать подходящий для вас раздел.</span>
+      </h2>
+
+      <div class="e404">404</div>
+
+
+    </div>
+
+    <aside class="col-md-3">
+      <h4>Каталог Квестов</h4>
+      <ul class="nav nav-list">
+        <% @cities.where(is_showing_in_menu: true).order(:name).each do |city| %>
+          <li>
+            <%= link_to root_url(subdomain: city.url) do %>
+              <i class="fa fa-circle-o"></i>
+              Квесты <%= city.nameP %>
+            <% end %>
+          </li>
+        <% end %>
+      </ul>
+
+    </aside>
+
+
+  </div>
+
+
+</section>

@@ -1,0 +1,26 @@
+$('#applyWindowErrors').html('');
+
+
+var textToInsert = '';
+
+textToInsert += '<div class="alert alert-block alert-danger">';
+textToInsert += '<a class="close" data-dismiss="alert" href="#">×</a>';
+textToInsert += '<h4 class="alert-heading"><i class="fa fa-check-square-o"></i> Errors on form:</h4>';
+textToInsert += '<ul>';
+
+<% @student.errors.each do |attr,msg| %>
+    textToInsert += '<li><%= attr %> <%= msg %></li>'
+<% end %>
+
+textToInsert += '</ul>';
+textToInsert += '</div>';
+
+
+$('#applyWindowErrors').append(textToInsert);
+
+document.getElementById('form').scrollIntoView();
+
+
+
+
+

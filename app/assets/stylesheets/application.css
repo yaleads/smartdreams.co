@@ -1,0 +1,59 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or vendor/assets/stylesheets of plugins, if any, can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any styles
+ * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
+ * file per style scope.
+ *
+ *= require template/bootstrap.min
+ *= require template/font-awesome.min
+ *= require template/animate
+ *= require template/essentials
+ *= require template/layout
+ *= require template/layout-responsive
+ *= require template/darkblue
+ *= require template/magnific-popup
+ *= require template/owl.carousel
+ *= require template/owl.theme
+ *= require template/owl.transitions
+ *= require template/blog
+ *= require template/settings
+ *= require_self
+ */
+
+.time_table_label {
+    padding: 5px 10px 5px 10px !important;
+    font-size: 14px;
+}
+.time_table_label-default {
+    background-color: #666666 !important;
+    color: #999 !important;
+}
+.alert li {
+    color: rgb(169, 68, 66) !important;
+}
+
+.modal-body {
+    padding: 4px !important;
+}
+
+#wrapper {
+    min-height: 350px !important;
+}
+
+textarea {
+    color: #000000 !important;
+}
+
+.isotope-item {
+    min-height: 430px !important;
+}
+
+.item-box-desc {
+    min-height: 130px !important;
+}

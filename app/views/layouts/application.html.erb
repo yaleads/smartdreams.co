@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<!--[if IE 8]>			<html class="ie ie8"> <![endif]-->
+<!--[if IE 9]>			<html class="ie ie9"> <![endif]-->
+<!--[if gt IE 9]><!-->	<html> <!--<![endif]-->
+<html>
+<head>
+  <meta charset="utf-8" />
+  <%= display_meta_tags %>
+
+  <!-- mobile settings -->
+  <meta name="viewport" content="width=device-width, maximum-scale=1, initial-scale=1, user-scalable=0" />
+
+  <!-- WEB FONTS -->
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700,800&subset=latin,cyrillic" rel="stylesheet" type="text/css" />
+
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= csrf_meta_tags %>
+
+</head>
+
+<body>
+  <header id="topNav" class="topHead">
+    <div class="container">
+
+      <!-- Mobile Menu Button -->
+      <button class="btn btn-mobile" data-toggle="collapse" data-target=".nav-main-collapse">
+        <i class="fa fa-bars"></i>
+      </button>
+
+      <!-- Logo text or image -->
+      <a class="logo pull-left" href="<%= root_path %>">
+        <%= image_tag("logo_v4.png", height: '60', alt: "Edu Starter") %>
+      </a>
+
+      <!-- Top Nav -->
+      <div class="navbar-collapse nav-main-collapse collapse pull-right">
+        <nav class="nav-main mega-menu">
+          <ul class="nav nav-pills nav-main scroll-menu" id="topMain">
+            <li>
+              <%= link_to 'How it works?', root_path %>
+            </li>
+            <li>
+              <%= link_to 'Ask for help', new_student_path %>
+            </li>
+            <li>
+              <%= link_to 'About us', root_path %>
+            </li>
+          </ul>
+        </nav>
+      </div>
+      <!-- /Top Nav -->
+    </div>
+  </header>
+
+<!-- /TOP NAV -->
+
+
+<!-- WRAPPER -->
+  <div id="wrapper" style="padding-bottom: 0px;">
+
+    <%= yield %>
+
+    <!-- FOOTER -->
+    <footer style="z-index:0; margin-top: 110px;">
+
+      <!-- copyright , scrollTo Top -->
+      <div class="footer-bar">
+        <div class="container">
+          <span class="copyright">ООО "Мастерская развлечений" - <a href="/">Мир квестов</a></span>
+          <a class="toTop" href="#topNav">В начало<i class="fa fa-arrow-circle-up"></i></a>
+        </div>
+      </div>
+      <!-- copyright , scrollTo Top -->
+
+
+      <!-- footer content -->
+      <div class="footer-content">
+        <div class="container">
+
+          <div class="row">
+
+
+            <!-- FOOTER CONTACT INFO -->
+            <div class="column col-sm-4 col-md-4">
+              <p class="lead">Контакты:</p>
+              <address class="font-opensans">
+                <ul>
+                  <li class="footer-sprite address">
+                    Москва, Дербеневская наб., д. 7, стр. 2
+                  </li>
+                  <li class="footer-sprite phone">
+                    +7 (499) 322-15-24 или +7 (812) 407-14-23
+                  </li>
+                  <li class="footer-sprite email">
+                    <a href="mailto:support@yourname.com">contact@worldofquests.ru</a>
+                  </li>
+
+                </ul>
+              </address>
+
+            </div>
+            <!-- /FOOTER CONTACT INFO -->
+
+            <!-- FOOTER CONTACT INFO -->
+            <div class="column col-sm-4 col-md-4">
+              <!--<h3>Добавить квест на сайт:</h3>-->
+
+              <p>
+                <%= link_to 'Как разместить квест на сайте mir-kvestov.ru?', root_path %> <br /><br />
+
+
+                Вы владелец квеста в реальности? - Пишите нам на
+                <a href="mailto:contact@worldofquests.ru">contact@worldofquests.ru</a>
+              </p>
+
+              <p>Ищете интересную работу? - <a href="<%= root_path %>">Вакансии в компании "Мир Квестов"</a>
+              </p>
+            </div>
+            <!-- /FOOTER CONTACT INFO -->
+
+            <!-- FOOTER CONTACT INFO -->
+            <div class="column col-sm-4 col-md-4 text-right">
+              <noindex>
+                <a href="http://vk.com/worldofquests" target="_blank" rel="nofollow"><i class="fa fa-vk" style="font-size: 100pt;"></i></a>
+                &nbsp;
+                &nbsp;
+                &nbsp;
+                <a href="http://instagram.com/worldofquests/" target="_blank" rel="nofollow"><i class="fa fa-instagram" style="font-size: 100pt;"></i></a>
+                &nbsp;
+                &nbsp;
+                &nbsp;
+              </noindex>
+
+
+            </div>
+            <!-- /FOOTER CONTACT INFO -->
+
+
+
+
+          </div>
+
+        </div>
+      </div>
+      <!-- footer content -->
+
+    </footer>
+    <!-- /FOOTER -->
+  </div>
+
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+
+</body>
+</html>

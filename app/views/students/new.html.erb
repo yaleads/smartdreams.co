@@ -1,0 +1,67 @@
+<% title 'New application' %>
+
+<section class="container" id="form">
+
+  <div class="row">
+    <h1>Post new application for help</h1>
+    <p class="lead">Fill form, please, be honest!</p>
+
+    <div class="col-sm-12 col-md-10" >
+
+      <div id="applyWindow">
+        <%= form_for @student, :remote => true  do |f| %>
+
+          <div id="applyWindowErrors"></div>
+
+          <div class="row">
+            <div class="form-group">
+              <div class="col-md-8">
+                <label>You name:</label>
+                <%= f.text_field :name, class: 'form-control'%>
+              </div>
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="form-group">
+              <div class="col-md-8">
+                <label>University you are applying:</label>
+                <%= f.text_field :university, class: 'form-control'%>
+              </div>
+            </div>
+          </div>
+
+
+
+          <div class="row">
+            <div class="form-group">
+              <div class="col-md-8">
+                <label>Motivation letter:</label>
+                <%= f.text_area :description, rows:10, class: 'form-control'%>
+              </div>
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="form-group">
+              <div class="col-md-8">
+                <label>Photos:</label>
+                <%= f.file_field :photo1%>
+                <%= f.file_field :photo2%>
+                <%= f.file_field :photo3%>
+              </div>
+            </div>
+          </div>
+
+          <input type="submit" value="Apply" class="btn btn-primary btn-lg" >
+        <% end %>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+
+
+

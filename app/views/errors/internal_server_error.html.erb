@@ -1,0 +1,36 @@
+<section class="container">
+
+  <div class="row">
+
+    <div class="col-md-9">
+      <br>
+      <h2>
+        <strong>Упс</strong>, что-то пошло не так!
+        <span class="subtitle">Нам очень жаль, но произошла ошибка в работе сервера. </span>
+        <span class="subtitle">Пожалуйста, свяжитесь с нами <a href="mailto:contact@worldofquests.ru">contact@worldofquests.ru</a>. Мы обязательно все починим!</span>
+      </h2>
+
+      <div class="e404">500</div>
+
+    </div>
+
+    <aside class="col-md-3">
+      <h4>Каталог Квестов</h4>
+      <ul class="nav nav-list">
+        <% @cities.where(is_showing_in_menu: true).order(:name).each do |city| %>
+            <li>
+              <%= link_to root_url(subdomain: city.url) do %>
+                  <i class="fa fa-circle-o"></i>
+                  Квесты <%= city.nameP %>
+              <% end %>
+            </li>
+        <% end %>
+      </ul>
+
+    </aside>
+
+
+  </div>
+
+
+</section>
